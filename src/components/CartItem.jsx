@@ -18,15 +18,19 @@ const CartItem = ({item, itemIndex}) => {
       <div>
 
         <div>
-          <img src={item.image} />
+          <img src={item.image} alt="hh" className="w-64 h-64 "/>
         </div>
         <div>
-          <h1>{item.title}</h1>
+          <h1 className="text-lg font-bold">{item.title}</h1>
           <h1>{item.description}</h1>
           <div>
-            <p>{item.price}</p>
+            
+            <p className="font-bold">
+                Price: ${item.price}
+              </p>
             <div
-            onClick={removeFromCart}>
+            onClick={removeFromCart} className="text-4xl cursor-pointer">
+            
               <FcDeleteDatabase/>
             </div>
           </div>
